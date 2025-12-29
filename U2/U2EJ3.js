@@ -17,9 +17,16 @@ let myArray = new Array();
 oddNumbers(7, myArray);
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
+function oddNumbers(n, arr) {
+	if (n < 0) {
+		return;
+	}
 
-
-
+	if (n % 2 !== 0) {
+		arr.push(n);
+	}
+	oddNumbers(n - 1, arr);
+}
 
 /**
  * TEST

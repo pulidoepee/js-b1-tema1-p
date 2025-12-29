@@ -12,7 +12,7 @@
 	EXERCICI 1.1.1 ENUNCIAT:
 	Donat l'Array planets, compost d'objectes literals de JS que representen els planetes del sistema solar,
 	se'ns demana, emprant el mètode map, definir en una constant a la qual anomenarem [result], un nou Array multidimensional,
-	el qual en cada posició contingui alhora un Array de dues posicions:
+	el qual en cada posició contingui alhora un Array de dues posicions: 
 	a la primera posició ha d'aparèixer el nom del planeta (name) i a la segona el seu diàmetre (diameter)
 */
 //Do not modify this code:
@@ -67,7 +67,11 @@ let planets = [
         }
     ]
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
+function getPlanetData(planet) {
+    return [planet.name, planet.diameter];
+}
 
+const result = planets.map(getPlanetData);
 
 
 /**

@@ -55,8 +55,20 @@ console.log(oldest(classroomStudents[2], classroomStudents[3], classroomStudents
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
-
-
+function oldest(...students) {
+  let currentYear = new Date().getFullYear();
+  let oldestStudent = students[0];
+  let maxAge = currentYear - oldestStudent.yearOfBirth;
+  for (let i = 1; i < students.length; i++) {
+    let student = students[i];
+    let age = currentYear - student.yearOfBirth;
+    if (age > maxAge) {
+      maxAge = age;
+      oldestStudent = student;
+    }
+  }
+  return oldestStudent.name;
+}
 
 /**
  * TEST

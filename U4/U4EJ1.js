@@ -15,6 +15,13 @@
 console.log(reverseArray(4,7,21,3)); //This will return [3,21,7,4]
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
+function reverseArray(...args) {
+  let reversedArray = [];
+  for ( let i = args.length - 1; i >=0; i--) {
+    reversedArray.push(args[i]);
+  }
+  return reversedArray;
+}
 
 
 
